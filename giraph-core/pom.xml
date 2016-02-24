@@ -244,7 +244,7 @@ under the License.
                 **/comm/requests/SaslCompleteRequest.java,
                 **/comm/requests/SaslTokenMessageRequest.java,
                 **/comm/SaslConnectionTest.java
-              </excludes> 
+              </excludes>
             </configuration>
           </plugin>
         </plugins>
@@ -434,7 +434,7 @@ under the License.
         </plugins>
       </build>
     </profile>
- 
+
     <profile>
       <id>hadoop_trunk</id>
       <build>
@@ -458,6 +458,28 @@ under the License.
 
   <dependencies>
     <!-- compile dependencies. sorted lexicographically. -->
+    <!-- BH -->
+      <dependency>
+        <groupId>org.apache.parquet</groupId>
+        <artifactId>parquet-common</artifactId>
+        <version>1.8.1</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.parquet</groupId>
+        <artifactId>parquet-encoding</artifactId>
+        <version>1.8.1</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.parquet</groupId>
+        <artifactId>parquet-column</artifactId>
+        <version>1.8.1</version>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.parquet</groupId>
+        <artifactId>parquet-hadoop</artifactId>
+        <version>1.8.1</version>
+      </dependency>
+    <!-- /BH -->
     <dependency>
       <groupId>com.facebook.nifty</groupId>
       <artifactId>nifty-client</artifactId>
@@ -549,6 +571,12 @@ under the License.
       <artifactId>slf4j-api</artifactId>
       <scope>runtime</scope>
     </dependency>
+    <dependency>
+      <groupId>com.codahale.metrics</groupId>
+      <artifactId>metrics-core</artifactId>
+      <version>3.0.1</version>
+      <scope>runtime</scope>
+    </dependency>
 
     <!-- test dependencies. sorted lexicographically. -->
     <dependency>
@@ -561,6 +589,24 @@ under the License.
       <artifactId>mockito-core</artifactId>
       <scope>test</scope>
     </dependency>
-
- </dependencies>
+    <dependency>
+      <groupId>com.google.protobuf</groupId>
+      <artifactId>protobuf-java</artifactId>
+      <version>2.5.0</version>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.arrow</groupId>
+      <artifactId>arrow-memory-0.1-SNAPSHOT</artifactId>
+      <scope>system</scope>
+      <version>1</version>
+      <systemPath>/home/bhaynes/research/arrow/java/memory/target/arrow-memory-0.1-SNAPSHOT.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.arrow</groupId>
+      <artifactId>arrow-vector-0.1-SNAPSHOT</artifactId>
+      <scope>system</scope>
+      <version>1</version>
+      <systemPath>/home/bhaynes/research/arrow/java/vector/target/vector-0.1-SNAPSHOT.jar</systemPath>
+    </dependency>
+  </dependencies>
 </project>

@@ -1,0 +1,1 @@
+sudo mvn -Phadoop_yarn -fae -Dhadoop.version=2.6.0 -DskipTests -Dcheckstyle.skip=true package

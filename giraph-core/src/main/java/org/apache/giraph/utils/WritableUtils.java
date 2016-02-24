@@ -536,14 +536,14 @@ public class WritableUtils {
       Vertex<I, V, E> vertex,
       ImmutableClassesGiraphConfiguration<I, V, E> conf)
     throws IOException {
-    vertex.getId().readFields(input);
-    vertex.getValue().readFields(input);
-    ((OutEdges<I, E>) vertex.getEdges()).readFields(input);
-    if (input.readBoolean()) {
-      vertex.voteToHalt();
-    } else {
-      vertex.wakeUp();
-    }
+      vertex.getId().readFields(input);
+      vertex.getValue().readFields(input);
+      ((OutEdges<I, E>) vertex.getEdges()).readFields(input);
+      if (input.readBoolean()) {
+        vertex.voteToHalt();
+      } else {
+        vertex.wakeUp();
+      }
   }
 
   /**

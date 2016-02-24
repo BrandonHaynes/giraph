@@ -39,12 +39,12 @@ under the License.
   </properties>
 
   <build>
-    <finalName>giraph-examples-${project.version}-${forHadoop}</finalName>    
+    <finalName>giraph-examples-${project.version}-${forHadoop}</finalName>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-assembly-plugin</artifactId>      
-      </plugin>      
+        <artifactId>maven-assembly-plugin</artifactId>
+      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
@@ -181,7 +181,7 @@ under the License.
                 **/comm/requests/SaslCompleteRequest.java,
                 **/comm/requests/SaslTokenMessageRequest.java,
                 **/comm/SaslConnectionTest.java
-              </excludes> 
+              </excludes>
             </configuration>
           </plugin>
         </plugins>
@@ -438,6 +438,20 @@ under the License.
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
       <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.arrow</groupId>
+      <artifactId>arrow-memory-0.1-SNAPSHOT</artifactId>
+      <scope>system</scope>
+      <version>1</version>
+      <systemPath>/home/bhaynes/research/arrow/java/memory/target/arrow-memory-0.1-SNAPSHOT.jar</systemPath>
+    </dependency>
+    <dependency>
+      <groupId>org.apache.arrow</groupId>
+      <artifactId>arrow-vector-0.1-SNAPSHOT</artifactId>
+      <scope>system</scope>
+      <version>1</version>
+      <systemPath>/home/bhaynes/research/arrow/java/vector/target/vector-0.1-SNAPSHOT.jar</systemPath>
     </dependency>
 
     <!-- test dependencies. sorted lexicographically. -->
